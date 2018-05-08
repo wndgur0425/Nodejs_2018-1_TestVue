@@ -13,6 +13,9 @@
         <br>
         <!--HTML 태그에 정의하는 방식-->
         <span v-bind:title="date">마우스를 가까이 가져오세요.</span> <!--span fouction title / v- :vue 명령어 의미 bind:묶다-->
+        <br>
+        <span v-if="seen">볼 수 있다.</span>
+        <span v-else>볼 수 없다.</span>
 
     </div>
         <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
@@ -20,7 +23,9 @@
             const myApp = new Vue({
                 el:'#app',  //Need to connect from HTML to id="app"
                 data:{message:'Cloud!',
-                date: '오늘 날짜:' + new Date().toLocaleDateString()} 
+                date: '오늘 날짜:' + new Date().toLocaleDateString(),
+                seen:true
+                } 
             });
 
         </script>
