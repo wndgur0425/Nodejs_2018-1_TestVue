@@ -2,27 +2,103 @@
 
 <head>
  <meta charset="UTF-8" />
- 
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css">
+ <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script><!--defer : 기본doc이 종료되고나서 적용-->
 </head>
 
 <body>
+ 
     <div id="app">
+           <!--
         this is a test.
-        <!--vue.js area/domain only data-->
-        <br>{{message + '1234'}} <!--important of {{}}-->
+       
+        <br>{{message + '1234'}} 
         <br>
-        <!--HTML 태그에 정의하는 방식-->
-        <span v-bind:title="date">마우스를 가까이 가져오세요.</span> <!--span fouction title / v- :vue 명령어 의미 bind:묶다-->
+        
+        <span v-bind:title="date">마우스를 가까이 가져오세요.</span> 
         <br>
         <span v-if="seen">볼 수 있다.</span>
         <span v-else>볼 수 없다.</span>
         <br>내가 공부하고 싶은 언어
+        
         <ul>
             <li v-for="todo in todos">{{todo.text}}</li>
-
         </ul>
+        -->
+        <div class="columns">
+                <div class="column button is-primary">Home</div>
+                <div class="column button is-primary">TEST</div>
+                <div class="column button is-primary">HTML</div>
+                <div class="column button is-primary">Vue.js</div>
+        </div>
+
+
+<div class="tile is-ancestor">
+  <div class="tile is-vertical is-8">
+    <div class="tile">
+      <div class="tile is-parent is-vertical">
+        <article class="tile is-child notification is-primary">
+          <p class="title">BULMA</p>
+          <p class="subtitle">How Wonderful!</p>
+        </article>
+        <article class="tile is-child notification is-warning">
+          <p class="title">...tiles</p>
+          <p class="subtitle">Bottom tile</p>
+        </article>
+      </div>
+      <div class="tile is-parent">
+        <article class="tile is-child notification is-info">
+          <p class="title">MOKWON LOGO</p>
+          <p class="subtitle">With an image</p>
+          <figure class="image is-4by3">
+            <img src="https://postfiles.pstatic.net/20131018_173/g_nesa_1382025447453kVKog_JPEG/%B8%F1%BF%F8%B4%EB%C7%D0%B1%B3.jpg?type=w3">
+          </figure>
+        </article>
+      </div>
+    </div>
+    <div class="tile is-parent">
+      <article class="tile is-child notification is-danger">
+        <p class="title">Wide tile</p>
+        <p class="subtitle">Aligned with the right tile</p>
+        <div class="content">
+          <!-- Content -->
+        </div>
+      </article>
+    </div>
+  </div>
+  <div class="tile is-parent">
+    <article class="tile is-child notification is-success">
+      <div class="content">
+        <p class="title">Tall tile</p>
+        <p class="subtitle">With even more content</p>
+        <div class="content">
+          <!-- Content -->
+        </div>
+      </div>
+    </article>
+  </div>
+</div>
 
     </div>
+
+
+    <section class="section">
+        <div class="container">
+                <h1 class="title">제목</h1>
+                <h2 class="subtitle">중요한 내용 적기</h2>
+                <textarea class="textarea" placeholder="10 lines of textarea" rows="10"></textarea>
+        </div>
+    </section>
+    <p class="buttons">
+            <a class="button is-small">
+              <span class="icon is-small">
+                <i class="fab fa-github"></i>
+              </span>
+              <span>GitHub</span>
+            </a>
+    </p>
+    <!--
         <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
         <script>
             const myApp = new Vue({
@@ -40,6 +116,7 @@
             });
 
         </script>
+    -->
 
 </body>
 
