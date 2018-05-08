@@ -16,6 +16,11 @@
         <br>
         <span v-if="seen">볼 수 있다.</span>
         <span v-else>볼 수 없다.</span>
+        <br>내가 공부하고 싶은 언어
+        <ul>
+            <li v-for="todo in todos">{{todo.text}}</li>
+
+        </ul>
 
     </div>
         <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
@@ -24,7 +29,13 @@
                 el:'#app',  //Need to connect from HTML to id="app"
                 data:{message:'Cloud!',
                 date: '오늘 날짜:' + new Date().toLocaleDateString(),
-                seen:true
+                seen:true,
+                todos: [
+                    {text: 'JavaScript'},
+                    {text: 'Node.js'},
+                    {text: 'Vue.js'},
+                    {text: 'Nuxt.js'}
+                ]
                 } 
             });
 
