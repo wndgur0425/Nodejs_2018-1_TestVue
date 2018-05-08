@@ -9,13 +9,18 @@
     <div id="app">
         this is a test.
         <!--vue.js area/domain only data-->
-        <br>{{message}} 
+        <br>{{message + '1234'}} <!--important of {{}}-->
+        <br>
+        <!--HTML 태그에 정의하는 방식-->
+        <span v-bind:title="date">마우스를 가까이 가져오세요.</span> <!--span fouction title / v- :vue 명령어 의미 bind:묶다-->
+
     </div>
         <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
         <script>
             const myApp = new Vue({
-                el:'#app',
-                data:{message:'Cloud!'} 
+                el:'#app',  //Need to connect from HTML to id="app"
+                data:{message:'Cloud!',
+                date: '오늘 날짜:' + new Date().toLocaleDateString()} 
             });
 
         </script>
